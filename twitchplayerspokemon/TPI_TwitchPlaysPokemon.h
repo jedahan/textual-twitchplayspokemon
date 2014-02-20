@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TPI_TwitchPlaysPokemon : NSObject
+@interface TPI_TwitchPlaysPokemon : NSObject <THOPluginProtocol>
+
+- (IRCMessage *)interceptServerInput:(IRCMessage *)input for:(IRCClient *)client;
 
 @end

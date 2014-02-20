@@ -25,6 +25,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2014 Jonathan Dahan. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string></string>
+	<string>TPI_TwitchPlaysPokemon</string>
 </dict>
 </plist>

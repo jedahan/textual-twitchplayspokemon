@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B66E726218B6B6E700D49631 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66E726118B6B6E700D49631 /* Cocoa.framework */; };
 		B66E726C18B6B6E700D49631 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B66E726A18B6B6E700D49631 /* InfoPlist.strings */; };
+		B66E727418B6B7D400D49631 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = B66E727318B6B7D400D49631 /* Headers */; };
+		B66E727718B6B86D00D49631 /* TPI_TwitchPlaysPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = B66E727618B6B86D00D49631 /* TPI_TwitchPlaysPokemon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		B66E726918B6B6E700D49631 /* twitchplayerspokemon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "twitchplayerspokemon-Info.plist"; sourceTree = "<group>"; };
 		B66E726B18B6B6E700D49631 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B66E726D18B6B6E700D49631 /* twitchplayerspokemon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "twitchplayerspokemon-Prefix.pch"; sourceTree = "<group>"; };
+		B66E727318B6B7D400D49631 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = ../../../../../../../Applications/Textual.app/Contents/Headers; sourceTree = "<group>"; };
+		B66E727518B6B86D00D49631 /* TPI_TwitchPlaysPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPI_TwitchPlaysPokemon.h; sourceTree = "<group>"; };
+		B66E727618B6B86D00D49631 /* TPI_TwitchPlaysPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPI_TwitchPlaysPokemon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,7 @@
 		B66E726718B6B6E700D49631 /* twitchplayerspokemon */ = {
 			isa = PBXGroup;
 			children = (
+				B66E727318B6B7D400D49631 /* Headers */,
 				B66E726818B6B6E700D49631 /* Supporting Files */,
 			);
 			path = twitchplayerspokemon;
@@ -84,6 +90,8 @@
 				B66E726918B6B6E700D49631 /* twitchplayerspokemon-Info.plist */,
 				B66E726A18B6B6E700D49631 /* InfoPlist.strings */,
 				B66E726D18B6B6E700D49631 /* twitchplayerspokemon-Prefix.pch */,
+				B66E727518B6B86D00D49631 /* TPI_TwitchPlaysPokemon.h */,
+				B66E727618B6B86D00D49631 /* TPI_TwitchPlaysPokemon.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66E726C18B6B6E700D49631 /* InfoPlist.strings in Resources */,
+				B66E727418B6B7D400D49631 /* Headers in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66E727718B6B86D00D49631 /* TPI_TwitchPlaysPokemon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,12 +248,16 @@
 		B66E727118B6B6E700D49631 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = /Applications/Textual.app/Contents/MacOS/Textual;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Applications/Textual.app/Contents/Frameworks;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "twitchplayerspokemon/twitchplayerspokemon-Prefix.pch";
 				INFOPLIST_FILE = "twitchplayerspokemon/twitchplayerspokemon-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /Applications/Textual.app/Contents/Headers;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -251,12 +265,16 @@
 		B66E727218B6B6E700D49631 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = /Applications/Textual.app/Contents/MacOS/Textual;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Applications/Textual.app/Contents/Frameworks;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "twitchplayerspokemon/twitchplayerspokemon-Prefix.pch";
 				INFOPLIST_FILE = "twitchplayerspokemon/twitchplayerspokemon-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = /Applications/Textual.app/Contents/Headers;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -280,6 +298,7 @@
 				B66E727218B6B6E700D49631 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
